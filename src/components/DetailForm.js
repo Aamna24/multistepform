@@ -47,7 +47,7 @@ const DetailsForm = ({history}) => {
         <FormContainer>
           <FormCompletetionSteps step1 />
           
-            <h1>Step 1 Eligibility Check</h1>
+            <h1>Step 1: Eligibility Check</h1>
             <p>
 The courses are funded by the governments Adult Education Budget (AEB) via the ESFA. So if you qualify you will be exempt from all course fees.
 </p>

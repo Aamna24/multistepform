@@ -27,7 +27,7 @@ const DeclarationForm = ({history}) => {
         <FormContainer>
             <FormCompletetionSteps step1 step2 step3 step4 step5 step6/>
 
-            <h1>Declaration</h1>
+            <h1>Step 6: Declaration</h1>
             
             <Form onSubmit={submitHandler}>
             <Form.Group controlId='level'>

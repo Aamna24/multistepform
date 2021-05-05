@@ -37,7 +37,7 @@ const EmployemntForm = ({history}) => {
         <FormContainer>
             <FormCompletetionSteps step1 step2 step3/>
 
-            <h1>Step 2: Employment Details</h1>
+            <h1>Step 3: Employment Details</h1>
             
             <Form onSubmit={submitHandler}>
             <Form.Group controlId='employementStatus'>

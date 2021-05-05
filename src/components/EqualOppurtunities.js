@@ -38,7 +38,7 @@ const EqualOppurtunities = ({history}) => {
         <FormContainer>
             <FormCompletetionSteps step1 step2 step3 step4 step5/>
 
-            <h1>Equal Oppurtunities</h1>
+            <h1>Step 5: Equal Oppurtunities</h1>
             
             <Form onSubmit={submitHandler}>
             <Form.Group controlId='ethnicOrigin'>

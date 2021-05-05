@@ -29,7 +29,7 @@ const QualificationForm = ({history}) => {
         <FormContainer>
             <FormCompletetionSteps step1 step2 step3 step4/>
 
-            <h1>Step 2: Qualification Details</h1>
+            <h1>Step 4: Qualification Details</h1>
             
             <Form onSubmit={submitHandler}>
             <Form.Group controlId='level'>
