@@ -18,7 +18,7 @@ const DeclarationForm = ({history}) => {
    
     const submitHandler=(e)=>{
         e.preventDefault()
-        dispatch(saveDeclarationDetails({prefContact,prefMark}))
+        dispatch(saveDeclarationDetails({prefContact}))
             history.push('/proof')
     
     }
