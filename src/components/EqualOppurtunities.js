@@ -20,7 +20,7 @@ const EqualOppurtunities = ({history}) => {
     const [nonEEACitizen, setNonEEACitizen] = useState(oppDetails.nonEEACitizen)
     //const [household, sethousehold] = useState(oppDetails.household)
     const [criminalConv, setCriminalConvictions] = useState(oppDetails.criminalConv)
-    
+    const [show, setShow] = useState(false)
   
    
    const dispatch = useDispatch()
@@ -32,6 +32,15 @@ const EqualOppurtunities = ({history}) => {
         }))
             history.push('/declaration')
     
+    }
+    const handleChange=(e)=>{
+        setDisablities(e.target.value)
+        if(e.target.value==="Yes"){
+          setShow(true)
+        }
+        else{
+          setShow(false)
+        }
     }
 
     return (
@@ -93,7 +102,7 @@ const EqualOppurtunities = ({history}) => {
                     <Form.Control
                      as='select' 
                       value={disabilities} 
-                      onChange={(e)=> setDisablities(e.target.value)}>
+                      onChange={handleChange}>
                           <option value="">[Please select one]</option>
               <option value="Yes">
                 Yes
@@ -103,6 +112,91 @@ const EqualOppurtunities = ({history}) => {
               </option>
                           </Form.Control>           
                 </Form.Group>
+                {show && (
+                  <>
+                  
+                <Form.Group controlId=''>
+                    <Form.Label >Select those which apply</Form.Label>
+                    <br/>
+                    
+                    <Form.Check
+                    type="checkbox"
+                    label="Vision Impairment"
+                    name='email'
+                    value='email'
+                   
+                    className='mr-2'
+                    >
+                      
+
+                   </Form.Check>
+
+                   <Form.Check
+                    type="checkbox"
+                    label="Hearing Impairment"
+                    name='both'
+                    value='both'
+                    
+                    
+                    className='mr-2'
+                    >
+                      
+
+                   </Form.Check>
+
+                   <Form.Check
+                    type="checkbox"
+                    label="Disability affecting mobility"
+                    name='post'
+                    value='post'
+                    className='mr-2'
+                    >
+                   </Form.Check>
+                   <Form.Check
+                    type="checkbox"
+                    label="Profound complex disabilities"
+                    name='post'
+                    value='post'
+                    className='mr-2'
+                    >
+                   </Form.Check>
+                   <Form.Check
+                    type="checkbox"
+                    label="Social and emotional difficulties"
+                    name='post'
+                    value='post'
+                    className='mr-2'
+                    >
+                   </Form.Check>
+                   <Form.Check
+                    type="checkbox"
+                    label="Mental Health Difficulties"
+                    name='post'
+                    value='post'
+                    className='mr-2'
+                    >
+                   </Form.Check>
+                   <Form.Check
+                    type="checkbox"
+                    label="Moderate Learning Difficulties"
+                    name='post'
+                    value='post'
+                    className='mr-2'
+                    >
+                   </Form.Check>
+                   <Form.Check
+                    type="checkbox"
+                    label="Severe Learning Difficulties"
+                    name='post'
+                    value='post'
+                    className='mr-2'
+                    >
+                   </Form.Check>
+                         
+                </Form.Group>
+                  </>
+                ) }
+
                 <Form.Group controlId='wheelchair'>
                     <Form.Label>Are you a wheelchair user? </Form.Label>
                     <Form.Control
