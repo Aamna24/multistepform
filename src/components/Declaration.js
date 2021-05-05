@@ -13,7 +13,7 @@ const DeclarationForm = ({history}) => {
     const [prefContact, setPrefContact] = useState('')
     const [decl, setDeclare] = useState()
     
-    const [prefMark, setPrefMark] = useState('')
+    
    const dispatch = useDispatch()
    
     const submitHandler=(e)=>{
