@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Form, Button} from 'react-bootstrap'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import FormContainer from './FormContainer'
 import {saveIdProof} from '../actions/formActions'
 import FormCompletetionSteps from './FormCompletetionSteps'
@@ -9,11 +9,8 @@ import SignaturePad from "react-signature-canvas";
 const Proof = ({history}) => {
 
     
-    const form = useSelector(state=> state.form)
-    const details = useSelector(state=> state.detailsForm)
-    const {detailsFormData} = details
+   
     
-    const {personalDetails} = form
     
 
     const [idPic, setID] = useState() 

@@ -3,14 +3,6 @@ import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {userLoginReducer} from './reducers/userReducer'
 import {DetailsFormReducer, formReducer} from './reducers/formReducer'
-import { persistStore, persistReducer} from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
-
-const persistConfig = {
-    key: 'root',
-    storage: storage,
-    whitelist: ['detailsForm', 'form'] // which reducer want to store
-  };
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -18,7 +10,6 @@ const reducer = combineReducers({
     form: formReducer
 })
 
-const pReducer=persistReducer(persistConfig, reducer)
 const userInfoFromStorage = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
 const detailsFormDataFromStorage = localStorage.getItem('detailsFormData') ? JSON.parse(localStorage.getItem('detailsFormData')) : {}
 const personalDetailsFromStorage = localStorage.getItem('personalDetails') ? JSON.parse(localStorage.getItem('personalDetails')) : {}

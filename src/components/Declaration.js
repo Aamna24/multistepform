@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Form, Button} from 'react-bootstrap'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import FormContainer from './FormContainer'
 import {saveDeclarationDetails} from '../actions/formActions'
 import FormCompletetionSteps from './FormCompletetionSteps'
@@ -8,12 +8,11 @@ import FormCompletetionSteps from './FormCompletetionSteps'
 const DeclarationForm = ({history}) => {
 
     
-    const form = useSelector(state=> state.form)
     
-    const {declaration} = form
     const [consent, setConsent]=useState('')
     const [prefContact, setPrefContact] = useState('')
-    const [decl, setDeclare] = useState('')
+    const [decl, setDeclare] = useState()
+    
     const [prefMark, setPrefMark] = useState('')
    const dispatch = useDispatch()
    
@@ -153,7 +152,7 @@ const DeclarationForm = ({history}) => {
                     type="checkbox"
                     label="I confirm and agree to above"
                     name='decl'
-                    value='decl'
+                    value={decl}
                     
                     onChange={e=>setDeclare(e.target.value)}
                     className='mr-2'

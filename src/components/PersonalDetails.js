@@ -8,8 +8,7 @@ const SecondForm = ({history}) => {
 
     
     const form = useSelector(state=> state.form)
-    const details = useSelector(state=> state.detailsForm)
-    const {detailsFormData} = details
+    
     
     const {personalDetails} = form
     

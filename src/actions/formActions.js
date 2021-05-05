@@ -1,7 +1,6 @@
 import {DETAILFORM_SAVE_REQUEST,
     DETAILFORM_SAVE_SUCCESS,
     DETAILFORM_SAVE_FAIL,
-     FORM_SAVE_REQUEST,
      FORM_SAVE_SUCCESS,
      FORM_SAVE_FAIL, 
      EMPLOYEMENTFORM_SAVE_SUCCESS,
@@ -14,7 +13,6 @@ import {DETAILFORM_SAVE_REQUEST,
      DECLARATIONFORM_SAVE_FAIL,
      PROOF_SAVE_SUCCESS,
      PROOF_SAVE_FAIL} from "../constants/formConstants"
-import axios from 'axios'
 
 export const saveDetailsForm =(data)=> async(dispatch)=>{
     try {
