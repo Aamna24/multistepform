@@ -95,58 +95,12 @@ const DeclarationForm = ({history}) => {
                 </Form.Group>
 
                 
-                <Form.Group controlId=''>
-                    <Form.Label >Preferred Marketing Method</Form.Label>
-                    <br/>
-                    
-                    <Form.Check
-                    type="checkbox"
-                    label="Email"
-                    name='email'
-                    value='email'
-                   
-                    onChange={e=>setPrefMark(e.target.value)}
-                    className='mr-2'
-                    >
-                      
-
-                   </Form.Check>
-
-                   <Form.Check
-                    type="checkbox"
-                    label="Email Or Phone "
-                    name='both'
-                    value='both'
-                    
-                    onChange={e=>setPrefMark(e.target.value)}
-                    className='mr-2'
-                    >
-                      
-
-                   </Form.Check>
-
-                   <Form.Check
-                    type="checkbox"
-                    label="Email, Phone or Post"
-                    name='post'
-                    value='post'
-                    
-                    onChange={e=>setPrefMark(e.target.value)}
-                    className='mr-2'
-                    >
-                      
-
-                   </Form.Check>
-                         
-                </Form.Group>
-
+                
                 
                 <Form.Group controlId=''>
                     <Form.Label >Declaration</Form.Label>
-                    <p>I confirm that the information provided in this application is correct and complete.</p>
-                    <p>I agree to My Free Course processing the information provided in accordance with current Data Protection legislation.</p>
-                    <p>I declare that I have correct and fully identified my prior qualifications.</p>
-                    <p>I agree to make every effort to complete the course, and understand that by withdrawing from the course I may be required to pay £25 administration fee.</p>
+                    <p>I agree to My Free Course processing the information provided in accordance with current Data Protection legislation. I declare that I have correctly and fully identified my prior qualifications and that the information provided is correct and complete.</p>
+                   
 
                    <Form.Check
                     type="checkbox"

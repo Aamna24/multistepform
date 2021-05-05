@@ -160,9 +160,31 @@ The courses are funded by the governments Adult Education Budget (AEB) via the E
                      as='select'
                       value={residencyStatus} 
                       onChange={(e)=> setResStatus(e.target.value)}>
-                        <option>[Please select one]</option>
-                        <option value='yes'>Yes</option>
-                        <option value='No'> No</option>
+                       <option value="">[Please Select One]</option>
+              <option value="British Citizen">British Citizen</option>
+              <option value="Citizen of a Country within the EEA">
+                Citizen of a Country within the EEA
+              </option>
+              <option value="Non-EU Citizen with indefinite leave to remain">
+                Non-EU Citizen with indefinite leave to remain
+              </option>
+              <option value="Non-EU Citizen with Discretionary leave to remain">
+                Non-EU Citizen with Discretionary leave to remain
+              </option>
+              <option value="Non-EU Citizen with Exceptional leave to remain">
+                Non-EU Citizen with Exceptional leave to remain
+              </option>
+              <option value="Non-EU Citizen with indefinite leave to remain">
+                Non-EU Citizen with indefinite leave to remain
+              </option>
+              <option value="Refugee Status">Refugee Status</option>
+              <option value="Asylum Seeker">Asylum Seeker</option>
+              <option value="Husband, Wife, Civil Partner or Child of an eligible person">
+                Husband, Wife, Civil Partner or Child of an eligible person
+              </option>
+              <option value="Other (details and evidence in learner file)">
+                Other (details and evidence in learner file)
+              </option>
                         </Form.Control>           
                 </Form.Group>
                 <Form.Group controlId='livingStatus'>

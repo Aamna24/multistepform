@@ -20,7 +20,7 @@ const EmployemntForm = ({history}) => {
     const [postcode, setPostcode] = useState(employmentDetails.postcode)
     const [ph, setPh] = useState(employmentDetails.ph)
     
-  
+  const [show, setShow]=useState(false)
    
    const dispatch = useDispatch()
    
@@ -31,6 +31,16 @@ const EmployemntForm = ({history}) => {
     ph}))
             history.push('/qualification')
     
+    }
+
+    const handleChange=(e)=>{
+      setEmpStatus(e.target.value)
+      if(e.target.value==="Unemployed, looking for work"){
+        setShow(true)
+      }
+      else{
+        setShow(false)
+      }
     }
 
     return (
@@ -46,20 +56,23 @@ const EmployemntForm = ({history}) => {
                      as ="select"
                      
                       value={employementStatus} 
-                      onChange={(e)=> setEmpStatus(e.target.value)}>
+                      onChange={handleChange}>
                            <option value="">[Please select one]</option>
               <option value="In paid employment (or self employed)">
                 In paid employment (or self employed)
               </option>
-              <option value="Not in paid employment, looking for work">
-                Not in paid employment, looking for work
+              <option value="Unemployed, looking for work">
+                Unemployed, looking for work
               </option>
               <option value="Employed but on less than £17,004 per year">
                 Employed but on less than £17,004 per year
               </option>
                           </Form.Control>           
                 </Form.Group>
-                <Form.Group controlId='hoursPerWeek'>
+
+                {!show && (
+                  <>
+                  <Form.Group controlId='hoursPerWeek'>
                     <Form.Label>If employed, please select how many hours you work per week?</Form.Label>
                     <Form.Control
                      as='select' 
@@ -130,6 +143,46 @@ const EmployemntForm = ({history}) => {
                       value={ph} 
                       onChange={(e)=> setPh(e.target.value)}></Form.Control>           
                 </Form.Group>
+                </>
+                )}
+
+                {show && (
+                  <>
+                  <h1>Step 3.5: UNEMPLOYED/LOW INCOME </h1>
+                  <Form.Group controlId='ph'>
+                    <Form.Label>If Unemployed, please select how long you have been unemployed?</Form.Label>
+                    <Form.Control
+                     as="select"
+                    
+                      value={ph} 
+                      onChange={(e)=> setPh(e.target.value)}>
+                        <option value="">[Please select one]</option>
+              <option value="0-5 months">0-5 months</option>
+              <option value="6-11 months">6-11 months</option>
+              <option value="12-23 months">12-23 months</option>
+              <option value="24-35 months">24-35 months</option>
+              <option value="Over 36 months">Over 36 months</option>
+                        
+                        </Form.Control>           
+                </Form.Group>
+
+                <Form.Group controlId='ph'>
+                    <Form.Label>Are you in reciepts of benefits?</Form.Label>
+                    <Form.Control
+                     as="select"
+                    
+                      value={ph} 
+                      onChange={(e)=> setPh(e.target.value)}>
+                        <option value="">[Please select one]</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              
+                        
+                        </Form.Control>           
+                </Form.Group>
+
+                  </>
+                )}
                 
 
                 <Button onClick={e=>{

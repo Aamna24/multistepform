@@ -43,21 +43,24 @@ const Proof = ({history}) => {
         <FormContainer>
             <FormCompletetionSteps step1 step2 step3 step4 step5 step6 step7/>
 
-            <h1>Step7: ID Proof</h1>
+            <h1>Final Step: ID Proof</h1>
             
             <Form onSubmit={submitHandler}>
-                <Form.Label>The coures are fully funded.Proof of identity is mandatory to access the funding. If this is not provided you will be ineligible for funding and will not be able to access your chosen course.</Form.Label>
-                <Form.Label>Examples of acceptable ID evidences are: Passport / Birth Certificate / Full Drivers License (provisional licences are not acceptable)</Form.Label>
-        
+                <Form.Label>
+                As a condition of funding the college is required to carry out identity checks. This is to make sure the funding goes to genuine UK or EU citizens that qualify for free/funded training.
+                </Form.Label>
+               
         <Form.Group controlId='title'>
 
-                    <Form.Label>Please upload one of the following ID Proofs- Passport / Birth Certificate / Full Drivers License (provisional licences are not acceptable)</Form.Label>
+                    <Form.Label>Please upload one of the following ID Proofs - Valid Passport / Full Drivers Licence / Utility Bill (last 3 months)</Form.Label>
                     <Form.Control
                      type='file' 
                      placeholder='Enter address'
                       
                       onChange={(e)=> setID(e.target.files[0])}></Form.Control>           
                 </Form.Group>
+
+                <p>If your name on your ID is a different (surname/first) name to the one on your application, the college will need further evidence to support this change. In the form of a marriage certificate or deed poll.</p>
 
              <Form.Label as="legend">Please Sign the Application</Form.Label>
                 <SignaturePad
@@ -91,7 +94,7 @@ const Proof = ({history}) => {
                 >Back</Button>
                 
 
-                <Button type="submit" variant="primary">Save Progrss & Continue</Button>
+                <Button type="submit" variant="primary">Send Application</Button>
                 
             </Form>
             
