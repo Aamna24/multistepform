@@ -46,7 +46,7 @@ const SecondForm = ({history}) => {
             <h1>Step 2: Personal Details</h1>
             
             <Form onSubmit={submitHandler}>
-            <Form.Group conrolId='title'>
+            <Form.Group controlId='title'>
                     <Form.Label>Title </Form.Label>
                     <Form.Control
                      type='text' 
@@ -54,7 +54,7 @@ const SecondForm = ({history}) => {
                       value={title} 
                       onChange={(e)=> setAddress(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='firstName'>
+                <Form.Group controlId='firstName'>
                     <Form.Label>firstName </Form.Label>
                     <Form.Control
                      type='text' 
@@ -62,7 +62,7 @@ const SecondForm = ({history}) => {
                       value={firstName} 
                       onChange={(e)=> setFirstName(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='lastName'>
+                <Form.Group controlId='lastName'>
                     <Form.Label>lastName </Form.Label>
                     <Form.Control
                      type='text' 
@@ -70,7 +70,7 @@ const SecondForm = ({history}) => {
                       value={lastName} 
                       onChange={(e)=> setLastName(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='gender'>
+                <Form.Group controlId='gender'>
                     <Form.Label>Gender </Form.Label>
                     <Form.Control
                      as='select'
@@ -84,7 +84,7 @@ const SecondForm = ({history}) => {
                           </Form.Control>           
                 </Form.Group>
 
-                <Form.Group conrolId='dob'>
+                <Form.Group controlId='dob'>
                     <Form.Label>Date Of Birth</Form.Label>
                     <Form.Control
                      type='date' 
@@ -92,7 +92,7 @@ const SecondForm = ({history}) => {
                       value={dob} 
                       onChange={(e)=> setDOB(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='addLine1'>
+                <Form.Group controlId='addLine1'>
                     <Form.Label>Address Line</Form.Label>
                     <Form.Control
                      type='text' 
@@ -100,7 +100,7 @@ const SecondForm = ({history}) => {
                       value={addLine1} 
                       onChange={(e)=> setAdd(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='age'>
+                <Form.Group controlId='age'>
                     <Form.Label>Age</Form.Label>
                     <Form.Control
                      type='text' 
@@ -108,7 +108,7 @@ const SecondForm = ({history}) => {
                       value={age} 
                       onChange={(e)=> setAge(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='city'>
+                <Form.Group controlId='city'>
                     <Form.Label>city</Form.Label>
                     <Form.Control
                      type='text' 
@@ -117,7 +117,7 @@ const SecondForm = ({history}) => {
                       onChange={(e)=> setCity(e.target.value)}></Form.Control>           
                 </Form.Group>
 
-                <Form.Group conrolId='county'>
+                <Form.Group controlId='county'>
                     <Form.Label>County</Form.Label>
                     <Form.Control
                      type='text' 
@@ -126,7 +126,7 @@ const SecondForm = ({history}) => {
                       onChange={(e)=> setCounty(e.target.value)}></Form.Control>           
                 </Form.Group>
 
-                <Form.Group conrolId='postcode'>
+                <Form.Group controlId='postcode'>
                     <Form.Label>postcode</Form.Label>
                     <Form.Control
                      type='text' 
@@ -134,7 +134,7 @@ const SecondForm = ({history}) => {
                       value={postcode} 
                       onChange={(e)=> setPostcode(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='yearsAtAdd'>
+                <Form.Group controlId='yearsAtAdd'>
                     <Form.Label>yearsAtAdd</Form.Label>
                     <Form.Control
                      type='text' 
@@ -142,7 +142,7 @@ const SecondForm = ({history}) => {
                       value={yearsAtAdd} 
                       onChange={(e)=> setYears(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='telephone'>
+                <Form.Group controlId='telephone'>
                     <Form.Label>telephone</Form.Label>
                     <Form.Control
                      type='text' 
@@ -151,7 +151,7 @@ const SecondForm = ({history}) => {
                       onChange={(e)=> setTel(e.target.value)}></Form.Control>           
                 </Form.Group>
 
-                <Form.Group conrolId='email'>
+                <Form.Group controlId='email'>
                     <Form.Label>email</Form.Label>
                     <Form.Control
                      type='text' 
@@ -160,7 +160,7 @@ const SecondForm = ({history}) => {
                       onChange={(e)=> setEmail(e.target.value)}></Form.Control>           
                 </Form.Group>
 
-                <Form.Group conrolId='emergencyContactName'>
+                <Form.Group controlId='emergencyContactName'>
                     <Form.Label>emergencyContactName</Form.Label>
                     <Form.Control
                      type='text' 
@@ -168,7 +168,7 @@ const SecondForm = ({history}) => {
                       value={emergencyContactName} 
                       onChange={(e)=> setEmerCon(e.target.value)}></Form.Control>           
                 </Form.Group>
-                <Form.Group conrolId='emergencyTelephone'>
+                <Form.Group controlId='emergencyTelephone'>
                     <Form.Label>emergencyTelephone</Form.Label>
                     <Form.Control
                      type='text' 

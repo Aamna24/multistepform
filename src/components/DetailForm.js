@@ -17,18 +17,22 @@ const DetailsForm = ({history}) => {
     const [mobile, setMobile] = useState(detailsFormData.mobile)
     const [appliedCourse, setCourse] = useState(detailsFormData.appliedCourse)
  const [highestQualificationLevel, setHighestQualificationLevel] = useState(detailsFormData.highestQualificationLevel)
-    const [age19OrOlder, setAge] = useState(detailsFormData.age19orOlder)
+    const [age19OrOlder, setAge] = useState(detailsFormData.age19OrOlder)
     const [residencyStatus, setResStatus] = useState(detailsFormData.residencyStatus)
     const [livingStatus, setLivingStatus] = useState(detailsFormData.livingStatus)
     
    const dispatch = useDispatch()
+
     const submitHandler=(e)=>{
+      
         e.preventDefault()
         dispatch(saveDetailsForm({firstName,lastName,email,mobile,
           highestQualificationLevel,appliedCourse,age19OrOlder,
         residencyStatus, livingStatus}))
         if(
-          highestQualificationLevel === "No"|| age19OrOlder==="No" || livingStatus==="No"
+          highestQualificationLevel === "No"|| age19OrOlder==="No" || livingStatus==="No" ||
+          highestQualificationLevel === undefined|| age19OrOlder===undefined || livingStatus===undefined
+          
         ){
 
           alert('Sorry, You didnot qualitfy')
