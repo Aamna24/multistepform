@@ -4,7 +4,11 @@ import { DETAILFORM_SAVE_REQUEST,
     QUALIFICATIONFORM_SAVE_REQUEST, 
     OPPURTUNITIESFORM_SAVE_REQUEST,
     DECLARATIONFORM_SAVE_REQUEST,
-    PROOF_SAVE_REQUEST} from "../constants/formConstants"
+    PROOF_SAVE_REQUEST,
+    FINAL_SAVE_REQUEST,
+    FINAL_SAVE_FAIL,
+    FINAL_SAVE_SUCCESS,
+    SIGN_SAVE_REQUEST} from "../constants/formConstants"
 
 
 export const DetailsFormReducer =(state={detailsFormData: {}}, action)=>{
@@ -20,6 +24,29 @@ export const DetailsFormReducer =(state={detailsFormData: {}}, action)=>{
     }
 }
 
+export const FinalFormReducer =(state={}, action)=>{
+    switch(action.type){
+        case FINAL_SAVE_REQUEST:
+            return {
+                loading: true,
+            }
+        case FINAL_SAVE_SUCCESS:
+            return {
+                loading: false,
+                success: true,
+                final: action.payload
+            }
+            case FINAL_SAVE_FAIL:
+                return {
+                    loading: false,
+                    error: action.payload
+                }
+       
+            default:
+            return state
+    }
+}
+
 export const formReducer =(state={
     detailsFormData:{},
     personalDetails: {},
@@ -27,7 +54,8 @@ export const formReducer =(state={
     qualificationDetails:{},
     oppDetails:{},
     declaration:{},
-    proof:{}
+    proof:{},
+    sign:{}
 }, action)=>{
     switch(action.type){
         case DETAILFORM_SAVE_REQUEST:
@@ -65,6 +93,11 @@ export const formReducer =(state={
                     ...state,
                     proof: action.payload
                 }
+                case SIGN_SAVE_REQUEST:
+                    return {
+                        ...state,
+                        sign: action.payload
+                    }
        
             default:
             return state

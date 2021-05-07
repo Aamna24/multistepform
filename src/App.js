@@ -10,6 +10,7 @@ import QualificationForm from './components/QualificationForm'
 import EqualOppurtunities from './components/EqualOppurtunities'
 import DeclarationForm from './components/Declaration'
 import Proof from './components/Proof'
+import Hello from './components/Hello'
 const App=()=> {
   return (
     
@@ -20,6 +21,7 @@ const App=()=> {
         <Route path="/proof" component={Proof}/>
         <Route path="/declaration" component={DeclarationForm} />
       <Route path="/oppurtunities" component={EqualOppurtunities}/>
+      <Route path="/hello" component={Hello}/>
 
         <Route path="/qualification" component={QualificationForm}/>
         <Route path="/employment" component={EmployemntForm}/>

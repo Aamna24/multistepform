@@ -28,13 +28,14 @@ const SecondForm = ({history}) => {
     const [email, setEmail] = useState(personalDetails.email)
     const [emergencyContactName, setEmerCon] = useState(personalDetails.emergencyContactName)
     const [emergencyTelephone, setEmerTel] = useState(personalDetails.emergencyTelephone)
+    const [nationalInsNo, setNIN] = useState(personalDetails.nationalInsNo)
    
    const dispatch = useDispatch()
    
     const submitHandler=(e)=>{
         e.preventDefault()
         dispatch(savePersonalDetails({title, firstName, lastName, gender, dob, addLine1,
-        age,city, county, postcode, yearsAtAdd, telephone, email , emergencyContactName, emergencyTelephone}))
+        age,city, county, postcode, yearsAtAdd, telephone, email , emergencyContactName, emergencyTelephone, nationalInsNo}))
         history.push('/employment')
     
     }
@@ -181,6 +182,15 @@ const SecondForm = ({history}) => {
                     
                       value={emergencyTelephone} 
                       onChange={(e)=> setEmerTel(e.target.value)}></Form.Control>           
+                </Form.Group>
+
+                <Form.Group controlId='nationalInsNo'>
+                    <Form.Label>nationalInsNo</Form.Label>
+                    <Form.Control
+                     type='text' 
+                    
+                      value={nationalInsNo} 
+                      onChange={(e)=> setNIN(e.target.value)}></Form.Control>           
                 </Form.Group>
 
                

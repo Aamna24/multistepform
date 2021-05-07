@@ -2,12 +2,13 @@ import {createStore, combineReducers, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {userLoginReducer} from './reducers/userReducer'
-import {DetailsFormReducer, formReducer} from './reducers/formReducer'
+import {DetailsFormReducer, formReducer, FinalFormReducer} from './reducers/formReducer'
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
     detailsForm: DetailsFormReducer,
-    form: formReducer
+    form: formReducer,
+    final: FinalFormReducer
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : null
@@ -18,6 +19,7 @@ const qualificationDetailsFromStorage = localStorage.getItem('qualificationDetai
 const oppDetailsFromStorage = localStorage.getItem('oppDetails') ? JSON.parse(localStorage.getItem('oppDetails')) : {}
 const declrationDetailsFromStorage = localStorage.getItem('declaration') ? JSON.parse(localStorage.getItem('declaration')) : {}
 const proofFromStorage = localStorage.getItem('proof') ? JSON.parse(localStorage.getItem('proof')) : {}
+const signFromStorage = localStorage.getItem('sign') ? JSON.parse(localStorage.getItem('sign')) : {}
 
 const initialState = {
     userLogin: { userInfo: userInfoFromStorage},
@@ -29,7 +31,8 @@ const initialState = {
        qualificationDetails: qualificationDetailsFromStorage,
        oppDetails: oppDetailsFromStorage,
        declaration: declrationDetailsFromStorage,
-       proof: proofFromStorage
+       proof: proofFromStorage,
+       sign: signFromStorage
     }
 }
 

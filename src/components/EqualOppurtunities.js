@@ -10,8 +10,6 @@ const EqualOppurtunities = ({history}) => {
     const form = useSelector(state=> state.form)
     
     const {oppDetails} = form
-    
-
     const [ethnicOrigin, setEthnicOrigin] = useState(oppDetails.ethnicOrigin) 
     const [disabilities, setDisablities] = useState(oppDetails.disabilities)
     const [wheelchair, setWheelchair] = useState(oppDetails.wheelchair)
