@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Multistep Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A MutltiStep Form created using React and Bootstrap.
+
+![Screenshot](/public/multistepform-design.png)
 
 ## Available Scripts
 
